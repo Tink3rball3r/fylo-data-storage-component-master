@@ -1,0 +1,178 @@
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--clr-4);
+}
+
+.background-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(/images/bg-desktop.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: 100%;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	position: absolute;
+	top: 33%;
+}
+
+.fylo-left {
+	background-color: var(--clr-3);
+	width: 350px;
+	height: 200px;
+	border-radius: 8px 80px 8px 8px;
+	filter: drop-shadow(5px 5px 3px var(--clr-4));
+
+	.logo {
+		width: 40%;
+		margin: 2rem 0 0 2rem;
+	}
+}
+
+// icons under the logo. felt it best to make them background images of divs.
+// made resizing them easier. If you have a better method, please let me know.
+
+.icons {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	margin: 2rem 0 0 2rem;
+
+	.icon-border {
+		width: 50px;
+		height: 50px;
+		background-color: var(--clr-4);
+		border-radius: 9px;
+	}
+
+	.icon-document {
+		background-image: url(/images/icon-document.svg);
+		background-repeat: no-repeat;
+		background-size: 40%;
+		background-position: center center;
+	}
+
+	.icon-folder {
+		background-image: url(/images/icon-folder.svg);
+		background-repeat: no-repeat;
+		background-size: 50%;
+		background-position: center center;
+		margin: 0 1rem;
+	}
+
+	.icon-upload {
+		background-image: url(/images/icon-upload.svg);
+		background-repeat: no-repeat;
+		background-size: 60%;
+		background-position: center center;
+	}
+}
+
+.fylo-right {
+	position: relative;
+	align-self: flex-end;
+	width: 580px;
+	height: 150px;
+	background-color: var(--clr-3);
+	border-radius: 8px;
+	filter: drop-shadow(5px 5px 3px var(--clr-4));
+}
+
+.alert-box {
+	position: relative;
+	left: 340px;
+	bottom: 70px;
+	width: 200px;
+	background-color: white;
+	border-radius: 12px 12px 0 12px;
+	padding: 0.5rem 0;
+
+	p {
+		font-weight: 700;
+		font-size: 50px;
+		text-align: center;
+	}
+
+	span {
+		font-weight: 700;
+		font-size: 14px;
+		color: var(--clr-2);
+		margin-left: 1rem;
+		vertical-align: middle;
+	}
+}
+
+.alert-box::after {
+	content: '';
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	bottom: -30px;
+	right: 0;
+	background-color: white;
+	clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.data-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.gb-used {
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.bar {
+	width: 500px;
+	height: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	background-color: var(--clr-4);
+	border-radius: 15px;
+}
+.bar-inner {
+	position: relative;
+	width: 400px;
+	height: 19px;
+	background-image: linear-gradient(
+		to right,
+		#ffa399,
+		#ff9092,
+		#ff7b90,
+		#ff6591,
+		#ff4d97
+	);
+	border-radius: 15px;
+
+	.circle-white {
+		position: absolute;
+		right: 0;
+		width: 18px;
+		height: 18px;
+		background: white;
+		border-radius: 50%;
+	}
+}
+
+.zero-thousand {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+	color: white;
+}

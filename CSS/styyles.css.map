@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,KAAK,CAAC;EACL,MAAM,CAAA,yCAAC;EACP,OAAO,CAAA,oBAAC;EACR,OAAO,CAAA,kBAAC;EACR,OAAO,CAAA,mBAAC;EACR,OAAO,CAAA,mBAAC;CACR",
+    "sources": [
+        "../SCSS/styyles.scss",
+        "../SCSS/_globals.scss",
+        "../SCSS/_var.scss",
+        "../SCSS/_mixins.scss",
+        "../SCSS/_layout.scss",
+        "../SCSS/_bp.scss"
+    ],
+    "names": [],
+    "file": "styyles.css"
+}
