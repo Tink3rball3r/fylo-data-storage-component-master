@@ -186,6 +186,9 @@ main {
 	.top-container {
 		max-width: 30%;
 	}
+	.bottom-container {
+		max-width: 50%;
+	}
 
 	.bottom-container h2 {
 		align-self: flex-start;
@@ -194,7 +197,7 @@ main {
 
 	.data-notification {
 		position: absolute;
-		left: 75%;
+		left: 60%;
 		top: -50%;
 		transform: translateX(0);
 	}
