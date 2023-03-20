@@ -7,6 +7,7 @@
 	--Dark-Blue: hsl(228, 56%, 26%);
 	--Very-Dark-Blue: hsl(229, 57%, 11%);
 	--black: hsl(0, 0%, 2%);
+	--white: hsl(180, 100%, 100%);
 }
 
 /* resets */
@@ -24,6 +25,12 @@ html {
 	color: var(--Pale-Blue);
 }
 
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
 /* mobile  styles */
 
 body {
@@ -36,7 +43,16 @@ main {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	width: 100vw;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	gap: 1rem;
+	width: 90%;
 }
 
 /* top container is on the left on screens larger than mobile */
@@ -53,6 +69,10 @@ main {
 
 .top-container__logo {
 	padding: 3rem 0 2rem 3rem;
+}
+
+.top-container__logo img {
+	width: 50%;
 }
 
 .icon__container {
@@ -74,6 +94,10 @@ main {
 
 .bottom-container {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	border-radius: 1rem;
 	padding: 1rem;
 }
@@ -90,7 +114,8 @@ main {
 }
 
 .bottom-container__meter {
-	position: relative;
+	display: flex;
+	align-items: center;
 	width: 90%;
 	height: 24px;
 	margin: 0 auto;
@@ -98,26 +123,21 @@ main {
 	border-radius: 1rem;
 }
 .meter-bar {
-	position: absolute;
+	position: relative;
+	margin: 0 0 0 0.1rem;
 	width: 70%;
 	height: 20px;
-	top: 50%;
-	left: 1%;
-	transform: translateY(-50%);
 	background: linear-gradient(to right, #ffa399 0%, #ff4d97 100%);
 	border-radius: 1rem;
 }
 
 .meter-dot {
 	position: absolute;
-	width: 16px;
-	height: 16px;
-	left: 64%;
-	top: 50%;
-	transform: translateY(-50%);
+	right: 3px;
+	width: 20px;
+	height: 20px;
 	background-color: var(--Pale-Blue);
 	border-radius: 50%;
-	z-index: 100;
 }
 
 .bottom-container__data {
@@ -138,11 +158,10 @@ main {
 	top: 80%;
 	transform: translateX(-50%);
 	color: var(--black);
-	font-size: 3rem;
+	font-size: 2.5rem;
 	padding: 1rem;
-	background-color: var(--Pale-Blue);
+	background-color: var(--white);
 	border-radius: 1rem;
-	border: 0.2rem solid var(--black);
 }
 
 .data-notification span {
@@ -154,17 +173,39 @@ main {
 /* desktop styles */
 @media only screen and (min-width: 700px) {
 	body {
-		background: var(--Very-Dark-Blue) url(/images/bg-desktop.png) 100% 100% / 100vw 55vh no-repeat;
+		background: var(--Very-Dark-Blue) url(/images/bg-desktop.png) 100% 100% / 100vw 50vh no-repeat;
 	}
 
-	main {
-		/* display: none; */
+	.container {
 		flex-direction: row;
-		max-width: 50%;
-		margin: 0 auto;
+		max-width: 80rem;
+		align-items: flex-end;
+		gap: 2rem;
 	}
 
 	.top-container {
-		max-width: 40%;
+		max-width: 30%;
+	}
+
+	.bottom-container h2 {
+		align-self: flex-start;
+		padding: 1.5rem 0 1rem 2rem;
+	}
+
+	.data-notification {
+		position: absolute;
+		left: 75%;
+		top: -50%;
+		transform: translateX(0);
+	}
+
+	.data-notification::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-top: 50px solid white;
+		border-left: 50px solid transparent;
 	}
 }
